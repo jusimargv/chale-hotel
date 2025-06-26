@@ -57,7 +57,7 @@ O layout foi desenvolvido pensando na experiência do usuário em diferentes dis
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/chale-hotel.git
+   git clone https://github.com/jusimargv/chale-hotel.git
    cd chale-hotel
    ```
 
