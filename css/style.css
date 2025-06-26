@@ -1,0 +1,350 @@
+/* Aplica estilo global para todos os elementos:
+   Remove margens e preenchimentos padrão para evitar espaçamentos indesejados.
+   Define box-sizing como border-box para que larguras e alturas incluam bordas e preenchimentos.
+   Remove decoração de texto (como sublinhado em links).
+   Remove estilos padrão de listas (como marcadores). */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estiliza o corpo da página:
+   Define a família de fontes para o texto.
+   Aplica uma imagem de fundo com cor branca.
+   Adiciona uma margem ao redor do conteúdo para espaçamento. */
+body {
+    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    background: #fff url(../image/bg.png);
+    margin: .9375rem;
+}
+
+/* Define o container principal da página:
+   Cor de fundo clara.
+   Centraliza horizontalmente com margem automática.
+   Define largura mínima e máxima para responsividade. */
+#container {
+    background: #ede9cc url(../image/bg-container.png)top center repeat-y;
+    margin: 0 auto;
+    min-width: 46.25rem;
+    max-width: 74.25rem;
+}
+
+/* Define a área do topo da página:
+   Posição relativa para permitir posicionamento absoluto interno.
+   Cor de fundo amarelada.
+   Altura fixa e altura mínima para consistência visual. */
+#topo {
+    position: relative;
+    background: #dbcd87;
+    height: 15.4em;
+    min-height: 15.625rem;
+}
+
+/* Define a área do logo dentro do topo:
+   Posição absoluta para posicionar dentro do topo.
+   Imagem de fundo principal sem repetição.
+   Ocupa toda a largura do topo e altura fixa.
+   Posicionada no canto superior esquerdo.
+   Z-index para controlar sobreposição. */
+#area-logo {
+    position: absolute;
+    background: url(../image/topo-imagem-principal.png) no-repeat;
+    width: 100%;
+    height: 15.625rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Estiliza o link do logo:
+   Posição absoluta para posicionar dentro da área do logo.
+   Posicionado com espaçamento do topo e da esquerda.
+   Z-index alto para ficar acima de outros elementos.
+   Imagem de fundo do logo sem repetição.
+   Define largura e altura fixas.
+   Text-indent negativo para esconder texto acessível. */
+.logo a {
+    position: absolute;
+    top: .9375rem;
+    left: .9375rem;
+    z-index: 3;
+    background: url(../image/logo.png) no-repeat;
+    width: 9.4375rem;
+    height: 4.125rem;
+    text-indent: -562.5rem;
+}
+
+/* Define a área do menu dentro do topo:
+   Posição absoluta para posicionar no topo.
+   Posicionado no canto superior direito.
+   Imagem de fundo lateral sem repetição.
+   Largura e altura fixas.
+   Z-index para controle de sobreposição. */
+#area-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../image/topo-imagem-lateral.png) no-repeat;
+    width: 28.125rem;
+    height: 15.625rem;
+    z-index: 2;
+}
+
+/* Define o conteúdo do menu:
+   Margem à esquerda e direita para espaçamento interno.
+   Padding para afastar o conteúdo das bordas. */
+#conteudo-menu {
+    margin-left: 90px;
+    margin-right: 15px;
+    padding: 15px;
+}
+
+/* Espaço reservado para o menu de locais, sem estilos definidos ainda */
+#menu-locais {
+    border-bottom: 1px solid #b5ab56;
+    border-top: 1px solid #b5ab56;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: .7rem;
+    color: #8b8448;
+    
+}
+
+/* Estiliza a lista de locais atendidos:
+   Define o alinhamento à esquerda e altura da linha para melhor leitura. */
+#menu-locais .locais a {
+    float: left;
+    line-height: 2.1em;
+    color: #6e672c;
+    padding: 5px;
+    
+}
+#menu-locais .locais a:hover {
+    float: left;
+    line-height: 2.1em;
+    color: #6e672c;
+    padding: 5px;
+    background: #fdf6be;
+    border-radius: 5px;
+}
+
+
+/* Estiliza o botão de reserva:
+   Transforma o texto em maiúsculas.
+   Define cor de fundo dourada e cor do texto clara.
+   Adiciona espaçamento interno e bordas arredondadas.
+   Posiciona o botão à direita. */
+a.reserva {
+    text-transform: uppercase;
+    background: #a29750;
+    color: #fff5b0;
+    padding: 5px 10px;
+    float: right;
+    border-radius: 5px;
+    line-height: 20px;
+    
+}
+a.reserva:hover {
+    text-transform: uppercase;
+    background: #c2aa0e;
+    color: #131106;
+    padding: 5px 10px;
+    float: right;
+    border-radius: 5px;
+    line-height: 20px;
+    
+}
+
+/* Limpa flutuações para manter o layout correto */
+.clear {
+    clear: both;
+}
+
+/*Barra de navegação vertical
+*/
+/* Define a margem superior para o menu vertical */
+#menu {
+    margin-top: 15px;
+}
+
+/* Define o menu de navegação vertical flutuando à esquerda */
+ul#navegacao {
+    float: left;
+}
+
+/* Estiliza os links do menu de navegação:
+   Transforma o texto em maiúsculas.
+   Define o tamanho da fonte.
+   Adiciona espaçamento vertical.
+   Define a cor do texto.
+   Define a altura da linha para alinhamento vertical. */
+ul#navegacao a {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 5px 0;
+    color:#6e672c;
+    line-height: 30px;
+}
+
+/* Estiliza o estado hover dos links do menu de navegação:
+   Mantém o texto em maiúsculas.
+   Mantém o tamanho da fonte.
+   Mantém o espaçamento vertical.
+   Altera a cor do texto para um tom mais escuro.
+   Mantém a altura da linha.
+   Adiciona um fundo amarelo claro.
+   Adiciona bordas arredondadas. */
+ul#navegacao a:hover {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 5px 0;
+    color:#181604;
+    line-height: 30px;
+    background:#fdf6be ;
+    border-radius: 5px;
+} 
+
+/* Define o estilo para a seção de depoimentos:
+   Define largura e altura fixas.
+   Flutua à direita.
+   Adiciona margem negativa à direita para ajuste de posicionamento. */
+.depoimento {
+    width: 14.125rem;
+    height: 10.25rem;
+    float: right;
+    margin-right: -1.25rem;
+}
+
+/* Área de conteúdos
+*/
+#area-principal {
+    width: 50%;
+    float: left;
+    background: url(../image/bg-area-principal.png) top left repeat-x;
+    padding: 15px 0;
+    
+}
+#area-lateral {
+    width: 50%;
+    float: right;
+    background: url(../image/bg-area-lateral.png) top left repeat-x;
+    padding: 20px 0;
+    
+}
+
+.conteudo {
+    margin: 0 auto;
+    width: 90%;
+    
+    
+}
+
+#clear {
+    clear: both;
+   
+}
+
+#rodape {
+    clear: both;
+    /* Limpa flutuações para garantir que o rodapé fique abaixo de todos os elementos */
+    padding: 16px;
+    /* Adiciona espaçamento interno de 16px */
+    text-align: center;
+    /* Centraliza o texto do rodapé */
+    font-size: 0.8em;
+    /* Define o tamanho da fonte como 80% do tamanho padrão */
+    color: #7d7640;
+    /* Define a cor do texto como um tom de marrom */
+    background: #fff url(../image/bg-rodape.png) repeat-x top;
+    /* Define fundo branco com imagem de fundo repetida horizontalmente no topo */
+    line-height: 2.5em;
+    /* Define a altura da linha para melhor espaçamento vertical */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+}
+
+/* Formatações de textos */
+
+h2{
+    color: #7d7640;
+    /* Define a cor dos títulos h2 como um tom de marrom */
+    font-size: 1.1em;
+    /* Define o tamanho da fonte como 110% do tamanho padrão */
+    padding: 5px 0;
+    /* Adiciona espaçamento vertical de 5px */
+}
+
+p{
+    font-size: 1em;
+    /* Define o tamanho da fonte dos parágrafos como 100% do tamanho padrão */
+    margin-bottom: 10px;
+    /* Adiciona margem inferior de 10px para separar parágrafos */
+}
+
+/* formatação da area lateral */
+#beneficios li {
+   padding: 8px;
+   /* Adiciona espaçamento interno de 8px */
+   border-bottom: 1px solid #f3efcb;
+   /* Adiciona borda inferior sutil para separar itens */
+   height: 6em;
+   /* Define altura fixa de 6em para consistência visual */
+}
+
+/* Estiliza as imagens do menu lateral:
+   Define largura de 50% do container do link.
+   Flutua à esquerda para alinhar ao lado do texto.
+   Adiciona padding e margem para espaçamento.
+   Sombra e borda arredondada para efeito visual.
+*/
+#beneficios li a img {
+   float: left;
+   /* Flutua a imagem à esquerda para alinhar com o texto */
+   margin-right: 8px;
+   /* Adiciona margem à direita para separar da imagem do texto */
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   /* Adiciona sombra sutil para dar profundidade */
+   border-radius: 5px;
+   /* Arredonda os cantos da imagem */
+}
+
+/* Estiliza o link do menu lateral:
+   Define largura de 50% do container do menu.
+   Padding e margem para espaçamento.
+   Borda arredondada para suavizar cantos.
+*/
+#beneficios li a p {
+   color: #000;
+   /* Define a cor do texto dos parágrafos como preto */
+   font-size: 0.8em;
+   /* Define o tamanho da fonte como 80% do tamanho padrão */
+}
+
+#beneficios li a h3 {
+   font-size: 1em;
+   /* Define o tamanho da fonte dos títulos h3 como 100% do tamanho padrão */
+   color: #615b2d;
+   /* Define a cor dos títulos como um tom de marrom escuro */
+   padding: 5px 0;
+   /* Adiciona espaçamento vertical de 5px */
+   background: url(../image/ornamento.png) no-repeat center right;
+   /* Adiciona imagem de fundo ornamental no lado direito */
+}
+
+#beneficios li:hover {
+   background: #f6f3d6;
+   /* Altera o fundo para um tom claro quando o mouse passa sobre o item */
+   cursor: pointer;
+   /* Muda o cursor para indicar que o item é clicável */
+   border-radius: 5px;
+   /* Arredonda os cantos do item no estado hover */
+}
+
+
+
+
+    
+
+
